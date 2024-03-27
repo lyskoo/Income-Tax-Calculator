@@ -1,0 +1,12 @@
+<div class="content">
+  <div class="form">
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label *ngIf="!!name?.length">{{ name }}</mat-label>
+        <input matInput type="number" [(ngModel)]="inputValue">
+      </mat-form-field>
+    </div>
+    <app-button [buttonText]="'calculate'" (buttonClick)="onButtonClick()"></app-button>
+  </div>
+  <app-salary-item [salaryInfo]="salaryInfo"></app-salary-item>
+</div>
