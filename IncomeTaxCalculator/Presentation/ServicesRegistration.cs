@@ -32,5 +32,15 @@ public static class ServicesRegistration
 
         IMapper mapper = mapperConfig.CreateMapper();
         builder.Services.AddSingleton(mapper);
+
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy(
+                "CorsPolicy",
+                builder => builder
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod());
+        });
     }
 }
