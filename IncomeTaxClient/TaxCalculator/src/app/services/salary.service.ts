@@ -8,7 +8,7 @@ import { Salary } from '../models/salary.model';
 })
 export class SalaryService {
 
-  private apiUrl = 'https://localhost:7041/api/TaxBand';
+  apiUrl = 'https://localhost:7041/api/TaxBand';
 
   constructor(private http: HttpClient) { }
 

@@ -17,7 +17,29 @@ describe('ButtonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render the button with default text', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('button').textContent).toContain('Click me');
+  });
+
+  it('should emit buttonClick event when clicked', () => {
+    let buttonClicked = false;
+    component.buttonClick.subscribe(() => {
+      buttonClicked = true;
+    });
+    const buttonElement = fixture.nativeElement.querySelector('button');
+    buttonElement.click();
+    expect(buttonClicked).toBeTruthy();
+  });
+
+  it('should render the button with provided text', () => {
+    component.buttonText = 'Custom Text';
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('button').textContent).toContain('Custom Text');
   });
 });
