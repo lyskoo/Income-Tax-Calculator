@@ -2,7 +2,6 @@
 using Business.Handlers;
 using Business.Models;
 using Business.Services.Interfaces;
-using Data.Entities;
 using Data.UnitOfWork;
 
 namespace Business.Services;

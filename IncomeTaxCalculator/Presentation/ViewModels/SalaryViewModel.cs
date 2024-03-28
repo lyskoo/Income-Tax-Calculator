@@ -2,15 +2,15 @@
 
 public class SalaryViewModel
 {
-    public decimal GrossAnnualSalary { get; private set; }
+    public decimal GrossAnnualSalary { get; set; }
 
-    public decimal GrossMonthlySalary { get; private set; }
+    public decimal GrossMonthlySalary { get; set; }
 
-    public decimal NetAnnualSalary { get; private set; }
+    public decimal NetAnnualSalary { get; set; }
 
-    public decimal NetMonthlySalary { get; private set; }
+    public decimal NetMonthlySalary { get; set; }
 
-    public decimal AnnualTaxPaid { get; private set; }
+    public decimal AnnualTaxPaid { get; set; }
 
-    public decimal MonthlyTaxPaid { get; private set; }
+    public decimal MonthlyTaxPaid { get; set; }
 }

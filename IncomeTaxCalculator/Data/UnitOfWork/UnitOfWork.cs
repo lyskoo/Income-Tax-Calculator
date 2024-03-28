@@ -1,7 +1,6 @@
 ﻿using Data.Data;
 using Data.Repositories;
 using Data.Repositories.Interfaces;
-using System;
 
 namespace Data.UnitOfWork;
 
